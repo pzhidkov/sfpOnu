@@ -1,0 +1,18 @@
+  description SFP_ONU
+  tcont 1 name All_service profile up-max-1g
+  gemport 1 name TR tcont 1
+  gemport 2 name IPTV tcont 1
+  gemport 3 name VPN1 tcont 1
+  gemport 4 name VPN2 tcont 1
+  gemport 5 name VPN3 tcont 1
+  gemport 6 name VPN4 tcont 1
+  gemport 7 name VPN5 tcont 1
+  gemport 8 name VPN6 tcont 1
+  service-port 1 vport 1 user-vlan 1028 vlan 9 svlan 3952 
+  service-port 2 vport 2 user-vlan 99 vlan 880 svlan 3952 
+  service-port 3 vport 3 user-vlan 193 vlan 193 svlan 4000 
+  service-port 4 vport 4 user-vlan 194 vlan 194 svlan 4000 
+  service-port 5 vport 5 user-vlan 195 vlan 195 svlan 4000 
+  service-port 6 vport 6 user-vlan 196 vlan 196 svlan 4000 
+  service-port 7 vport 7 user-vlan 197 vlan 197 svlan 4000 
+  service-port 8 vport 8 user-vlan 198 vlan 198 svlan 4000 

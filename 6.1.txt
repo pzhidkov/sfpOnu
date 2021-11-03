@@ -1,0 +1,108 @@
+config t
+interface range gigabitethernet 0/1-4
+ description STB
+ loopback-detection enable
+ switchport mode access
+ switchport access vlan 99
+exit
+interface gigabitethernet 0/5
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 193
+exit
+interface gigabitethernet 0/6
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 194
+exit
+interface gigabitethernet 0/7
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 195
+exit                                                          
+interface gigabitethernet 0/8
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 196
+exit
+interface gigabitethernet 0/9
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 197
+exit
+interface gigabitethernet 0/10
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 198
+exit
+interface gigabitethernet 0/11
+ loopback-detection enable
+ switchport mode general                                        
+ switchport general allowed vlan add 199
+exit
+interface gigabitethernet 0/12
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 200
+exit
+interface gigabitethernet 0/13
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 201
+exit
+interface gigabitethernet 0/14
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 202
+exit
+interface gigabitethernet 0/15                                 
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 203
+exit
+interface gigabitethernet 0/16
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 204
+exit
+interface gigabitethernet 0/17
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 205
+exit
+interface gigabitethernet 0/18
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 206
+exit                                                          
+interface gigabitethernet 0/19
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 207
+exit
+interface gigabitethernet 0/20
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 208
+exit
+interface gigabitethernet 0/21
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 209
+exit
+interface gigabitethernet 0/22
+ loopback-detection enable
+ switchport mode general                                        
+ switchport general allowed vlan add 210
+exit
+interface gigabitethernet 0/23
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 211
+exit
+interface gigabitethernet 0/24
+ loopback-detection enable
+ switchport mode general
+ switchport general allowed vlan add 212
+exit
+exit

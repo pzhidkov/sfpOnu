@@ -1,0 +1,14 @@
+no broadcast-downstream
+profile ports SFP_ONU
+service 0 profile cross-connect SFP_TR dba dba_TR-069
+service 1 profile cross-connect SFP_IPTV dba unlim
+service 2 profile cross-connect SFP_VPN1 dba unlim
+service 3 profile cross-connect SFP_VPN2 dba unlim
+service 4 profile cross-connect SFP_VPN3 dba unlim
+service 5 profile cross-connect SFP_VPN4 dba unlim
+service 6 profile cross-connect SFP_VPN5 dba unlim
+service 7 profile cross-connect SFP_VPN6 dba unlim
+service 0 custom cvid 9
+service 0 custom svid 3952
+service 1 custom cvid 880
+service 1 custom svid 3952

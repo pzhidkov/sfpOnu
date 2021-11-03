@@ -1,0 +1,12 @@
+  service TR gemport 1 vlan 1028
+  service IPTV gemport 2 vlan 99
+  service VPN1 gemport 3 vlan 193
+  service VPN2 gemport 4 vlan 194
+  service VPN3 gemport 5 vlan 195
+  service VPN4 gemport 6 vlan 196
+  service VPN5 gemport 7 vlan 197
+  service VPN6 gemport 8 vlan 198
+  igmp eth_0/1 profile SFP_ONU
+  vlan port eth_0/1 mode trunk
+  vlan port eth_0/1 vlan all
+  mvlan 99
