@@ -22,7 +22,7 @@ telnet.write(password)
 telnet.read_until(sw_glob)
 
 clear_or_config = input('Очистить конфигурацию? Yes/No\n')
-if clear_or_config.lower() == 'yes':
+if (clear_or_config.lower() == 'yes' or clear_or_config.lower() == 'y'):
 	telnet.write(b'configure t\n')
 	telnet.read_until(b'(config)#')
 	telnet.write(b'default interface range gig0/1-24\n')
