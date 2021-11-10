@@ -119,8 +119,8 @@ try:
                 telnet.read_until(b'#')
                 telnet.write(b'exit\n')
                 telnet.read_until(b'#')
-        elif test_number == 6:
-                print('Bye')
+	elif test_number == 6:
+        	print('Bye')
 	else:
 		print('Такого значения в списке нет:')
 except ValueError:
