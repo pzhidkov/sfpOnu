@@ -34,7 +34,7 @@ if (clear_or_config.lower() == 'yes' or clear_or_config.lower() == 'y'):
 	print('Ports config cleared')
 
 try:
-	print('Выберите тест:\n 1: 6.1_Trunk+IPTV\n 2: 6.2_Access+native vlan\n 3: 6.4_IPTV\n 4: ServiceCheck\n 5: Выход')
+	print('Выберите тест:\n 1: 6.1_Trunk+IPTV\n 2: 6.2_Access+native vlan\n 3: 6.4_IPTV\n 4: ServiceCheck\n 5: L2VPN\n 6: Выход')
 	test_number = int(input())
 	if test_number == 1:
 		for i in test61:
@@ -95,7 +95,32 @@ try:
 		telnet.write(b'exit\n')
 		telnet.read_until(b'ONU')
 	elif test_number == 5:
-		print('Bye')
+                telnet.write(b'conf t\n')
+                telnet.read_until(b'(config)#')
+                telnet.write(b'interface gig0/1\n')
+                telnet.read_until(b'#')
+                telnet.write(b'switchport mode access\n')
+                telnet.read_until(b'#')
+                telnet.write(b'switchport access vlan 173\n')
+                telnet.read_until(b'#')
+                telnet.write(b'switchport dot1q tunnel\n')
+                telnet.read_until(b'#')
+                telnet.write(b'exit\n')
+                telnet.read_until(b'#')
+                telnet.write(b'interface gig0/2\n')
+                telnet.read_until(b'#')
+                telnet.write(b'switchport mode access\n')
+                telnet.read_until(b'#')
+                telnet.write(b'switchport access vlan 174\n')
+                telnet.read_until(b'#')
+                telnet.write(b'switchport dot1q tunnel\n')
+                telnet.read_until(b'#')
+                telnet.write(b'exit\n')
+                telnet.read_until(b'#')
+                telnet.write(b'exit\n')
+                telnet.read_until(b'#')
+        elif test_number == 6:
+                print('Bye')
 	else:
 		print('Такого значения в списке нет:')
 except ValueError:
